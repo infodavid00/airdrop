@@ -1,4 +1,5 @@
 // /transactions
+import { ChevronDown, ChevronUp } from "react-feather";
 import Header from "../../objects/Header/Header.js";
 import "./transactions.css";
 
@@ -65,7 +66,33 @@ export default function Transactions() {
           <table className="tc2-table">
             <thead>
               <tr>
-                <th className="tc2-table-th">Time/Date</th>
+                <th
+                  className="tc2-table-th"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "1em",
+                    alignItems: "center",
+                  }}
+                >
+                  Time/Date
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <ChevronUp color="pink" width={13} height={13} />
+                    <ChevronDown
+                      color="pink"
+                      width={13}
+                      height={13}
+                      style={{ marginTop: -5 }}
+                    />
+                  </span>{" "}
+                </th>
                 <th className="tc2-table-th">Wallet</th>
                 <th className="tc2-table-th">Task</th>
                 <th className="tc2-table-th">Platform</th>
