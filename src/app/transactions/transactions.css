@@ -1,0 +1,110 @@
+
+#transactions-main {
+      margin: auto;
+      margin-top: 9em;
+      padding: 15px;
+      background-color: #121420;
+      width: 95%;
+      border-radius: 10px;
+      color: rgba(255, 255, 255, 0.8);
+      overflow-x: auto;
+      margin-bottom: 1em;
+}
+#trans-child1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+}
+.trans-child1-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #1E2F5B;
+      border-radius: 10px;
+      width: 150px;
+      height: 100px;
+}
+.tc1-c-h1 {
+      padding: 0.8em 0px;
+      text-align: center;
+      width: 100%;
+      border-bottom: 1px solid #222;
+      font-weight: 700;
+      white-space: nowrap;
+}
+.tc1-c-h2 {
+      padding: 1em 0;
+      font-weight: 700;
+      font-size: 19px;
+}
+
+#trans-child2 {
+      padding: 10px 1.5em;
+      margin-top: 1.7em;
+      background-color:#1E2F5B;
+      overflow-x: auto;
+}
+#trans-child2-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 17px;
+}
+#trans-child2-header span {
+      text-decoration: underline;
+}
+
+.tc2-table {
+      width: 100%;
+      text-align: left;
+      border: none;
+      border-spacing: 0;
+      border-collapse: collapse;
+}
+.tc2-table-th {
+      background-color: #121420;
+      padding: 0.6rem;
+      padding-left: 0;
+}
+.tc2-table-th:first-child {
+      padding-left: 1.8rem;
+      border-radius: 10px 0px 0px 10px;
+}
+.tc2-table-th:last-child {
+      border-radius: 0px 10px 10px 0px;
+}
+
+.tc2-table-td {
+      padding: 1.2rem 0.6rem;
+      white-space: nowrap;
+      border-bottom: 1px solid #222;
+      padding-left: 0;
+}
+.tc2-table-td {
+      padding: 1.2rem 0.6rem;
+      white-space: nowrap;
+      border-bottom: 1px solid #222;
+      padding-left: 0;
+}
+
+.tc2-table-td:last-child {
+      color: rgba(0,180,0,1);
+}
+.tc2-table-td-error {
+      color: tomato;
+}
+ 
+@media (min-width: 760px) {
+#transactions-main {
+      width: 97%;
+      padding: 20px;
+}
+#trans-child1 {
+      justify-content: space-between;
+}
+}
