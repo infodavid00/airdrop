@@ -1,5 +1,5 @@
 // /config
-import { Bell, Calendar, Mail } from "react-feather";
+import { Bell, Calendar } from "react-feather";
 import Header from "../../objects/Header/Header.js";
 import "./config.css";
 import Profile from "../../assets/PFP 1.png";
@@ -7,6 +7,7 @@ import Image from "next/image.js";
 import Setting from "../../assets/Settings Icon.svg";
 import Dollar from "../../assets/Vector.svg";
 import Download from "../../assets/Vector (10).svg";
+import Wallet from "../../assets/Vector (5) (1).svg";
 
 export default function Config() {
   const username = "meruzu_nft";
@@ -51,7 +52,7 @@ export default function Config() {
       to: "/config",
     },
     {
-      icon: () => <Mail width={20} height={20} />,
+      icon: () => <Image src={Wallet} />,
       name: "Wallets",
       description: "View and edit your wallet settings.",
       to: "/config",
@@ -140,7 +141,7 @@ export default function Config() {
                     <Bell
                       color={
                         elem.type !== "Error Notification"
-                          ? "rgba(0,180,0,1)"
+                          ? "rgba(0,150,0,1)"
                           : "tomato"
                       }
                       style={{ alignSelf: "flex-start", width: 50 }}

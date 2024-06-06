@@ -8,6 +8,7 @@ import Exit from "../../assets/Vector (5).svg";
 import Transaction from "../../assets/Vector (1).svg";
 import Dollar from "../../assets/Vector.svg";
 import Setting from "../../assets/Settings Icon.svg";
+import Wallet from "../../assets/Vector (5) (1).svg";
 
 export default function Header({ active }) {
   const username = "Meruzu_nft";
@@ -35,7 +36,7 @@ export default function Header({ active }) {
       <div id="header-subcontainer">
         <div id="header-subcont-child">
           <button className="header-nav-list">
-            <Mail color={"pink"} width={20} height={20} />{" "}
+            <Image src={Wallet} />
             <Link
               href="/wt"
               className={

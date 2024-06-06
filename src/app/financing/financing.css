@@ -34,6 +34,8 @@
       gap: 1em;
       overflow-x: auto;
       white-space: nowrap;
+      word-break: normal;
+      word-wrap: break-word;
 }
 
 .fs2cm {
@@ -44,6 +46,23 @@
       max-width: 100%;
 }
 @media (max-width: 760px) {
+.fs2cm {
+      width: 51%;
+      align-self: flex-start;
+      margin-left: -1px;
+}
+.financing-sec2-cardgen-body-l {
+      font-size: 13px;
+}
+}
+@media (max-width: 702) {
+ .fs2cm {
+      width: 65%;
+      align-self: flex-start;
+      margin-left: -1px;
+}
+}
+@media (max-width: 405px) {
 .fs2cm {
       width: 100%;
 }

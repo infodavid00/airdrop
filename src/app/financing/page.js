@@ -7,9 +7,10 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
-  DollarSign,
   Mail,
 } from "react-feather";
+import Wallet from "../../assets/Vector (5) (1).svg";
+import Image from "next/image.js";
 
 const ETH = () => {
   return (
@@ -37,7 +38,7 @@ const CARD1 = ({ title, wallet, amount }) => {
       <div className="financing-sec2-cardgen-body">
         <div className="financing-sec2-cardgen-body-header">Address</div>
         <div className="financing-sec2-cardgen-body-l">
-          <Mail />
+          <Image src={Wallet} />
           <span>{wallet}</span>
         </div>
       </div>
@@ -50,7 +51,7 @@ const CARD1 = ({ title, wallet, amount }) => {
               width: "100%",
               backgroundColor: "transparent",
               border: "none",
-              color: "pink",
+              color: "white",
             }}
           >
             <option>{amount} Ethereum</option>
