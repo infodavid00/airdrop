@@ -17,7 +17,7 @@ const ETH = () => {
       style={{
         width: "20px",
         height: "20px",
-        borderRadius: 2,
+        borderRadius: 5,
         backgroundColor: "dodgerblue",
         display: "flex",
         justifyContent: "center",
@@ -108,7 +108,9 @@ export default function Financing() {
                 className="financing-sec2-cardgen-body-l"
                 style={{
                   justifyContent: "center",
-                  width: "auto",
+                  width: "100px",
+                  margin: "auto",
+                  marginBottom: 10,
                 }}
               >
                 <ETH />
@@ -122,6 +124,8 @@ export default function Financing() {
                 flexDirection: "row",
                 justifyContent: "space-around",
                 alignItems: "center",
+                width: "100px",
+                margin: "auto",
               }}
             >
               <span
@@ -163,7 +167,8 @@ export default function Financing() {
                 className="financing-sec2-cardgen-body-l"
                 style={{
                   justifyContent: "center",
-                  width: "auto",
+                  width: "100px",
+                  margin: "auto",
                   cursor: "pointer",
                   border: "1px solid pink",
                 }}

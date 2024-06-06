@@ -35,7 +35,7 @@ export default function Help() {
 
         <div className="help-body" style={{ borderTop: "none" }}>
           <h3 className="help-q">
-            <ArrowRight className="help-arrow" /> What are the risks associated
+            <ArrowDown className="help-arrow" /> What are the risks associated
             with Airdrop Farming?
           </h3>
           <p className="help-a">
