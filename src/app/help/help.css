@@ -1,0 +1,86 @@
+
+
+.help-body {
+  border-top: 1px solid white;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+.help-q {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+}
+.help-a {
+  color: rgba(255,255,255,0.8);
+  margin-top: 1em;
+  margin-left: 2em;
+  width: 60%;
+}
+
+#help-form {
+  background-color: #1E2F5B;
+  border-radius: 10px;
+  margin-top: 2em;
+  width: 50%;
+}
+
+#help-form div {
+  padding: 10px 2em;
+  border-bottom: 1px solid #222;
+  margin-bottom: 2em;
+}
+.help-form-inp {
+  background-color: #121420;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  display: block;
+  margin: 10px 2em;
+  width: 90%;
+}
+.help-form-inp::placeholder {
+  color: white;
+}
+#help-form-btn {
+  background-color: #121420;
+  color: white;
+  margin: 9px 2em;
+  padding: 6px 2em;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+.help-q {
+    font-size: 18px;
+    gap: 0.2em;
+}
+.help-arrow {
+    width: 80px;
+}
+.help-a {
+    width: 90%;
+    margin-left: 2.2em;
+}
+#help-form {
+    width: 100%;
+}
+#help-form div {
+   padding: 10px 1em;
+}
+.help-form-inp {
+   margin: 10px 1em;
+}
+#help-form-btn {
+   margin: 9px 1em;
+   padding: 6px 1em;
+}
+} 

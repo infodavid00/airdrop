@@ -31,8 +31,8 @@ export default function Transactions() {
     <>
       <Header active={"transactions"} />
       <div id="transactions-main">
-        <h2>Transactions</h2>
-        <p style={{ marginTop: 16, marginBottom: 25 }}>
+        <h2 style={{ color: "white" }}>Transactions</h2>
+        <p style={{ marginTop: 16, marginBottom: 25, color: "white" }}>
           Here is an overview of all recent transactions made by the automated
           farming process.
         </p>

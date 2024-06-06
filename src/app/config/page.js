@@ -143,7 +143,7 @@ export default function Config() {
                           ? "rgba(0,180,0,1)"
                           : "tomato"
                       }
-                      style={{ alignSelf: "flex-start", width: 40 }}
+                      style={{ alignSelf: "flex-start", width: 50 }}
                     />
                     <div>
                       <div className="cs2ccb-p2-header">
