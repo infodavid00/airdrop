@@ -1,0 +1,111 @@
+
+
+#config-body-main {
+  margin: auto;
+  margin-top: 9em;
+  padding: 15px;
+  background-color: #121420;
+  width: 95%;
+  border-radius: 10px;
+  color: rgba(255,255,255,0.8);
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+#config-section2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.config-section2-card {
+  background-color: #1D2C55;
+  /* padding: 10px; */
+  border-radius: 10px;
+}
+.config-section2-card-header {
+  border-bottom: 1px solid #121420;
+  padding: 10px;
+}
+.config-section2-card-content-body {
+  background-color: #121420;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#config-section2-card-content-panel1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#cs2ccp1-profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.cs2ccb-p2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center ; 
+  gap: 1em;
+  border-bottom: 0.7px solid grey;
+}
+.cs2ccb-p2-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+.config-section2-card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+.config-section2-card-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.config-section2-card-list-icon {
+ background-color: #121420;
+ /* padding: 5px; */
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ border-radius: 10px;
+ width: 40px;
+ height: 40px;
+}
+
+@media (min-width: 760px) {
+#config-body-main {
+  width: 97%;
+  padding: 20px;
+}
+.config-section2-card {
+  width: 48%;
+}
+.config-section2-card-content-body {
+  justify-content: space-between;
+}
+.config-section2-card-list {
+ width: 30%;
+}
+}

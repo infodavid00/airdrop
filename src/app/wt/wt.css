@@ -1,0 +1,119 @@
+/* 
+#wt {
+     position: fixed;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     top: 0;
+      background-image: url("../../assets/background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index:10;
+} */
+#wt-body-main {
+      margin: auto;
+      margin-top: 8em;
+      padding: 15px;
+      width: 97%;
+      color: rgba(255, 255, 255, 0.8);
+      overflow-x: auto;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+}
+#wt-card1-head1 {
+      background-color: #121420;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+      padding: 10px;
+      border-radius: 7px;
+      overflow-x: auto;
+}
+.wt-card1-head1-children {
+     display: flex;
+     flex-direction: row;
+     /* gap: 0.5em; */
+     align-items: center;
+     flex-wrap: wrap;
+}
+.wt-card1-head1-children span {
+     font-size: 15px;
+}
+.wt-card1-head1-children select {
+     background-color: transparent;
+     border:none;
+     outline: none;
+     color: white;
+}
+
+#wt-card1-head2 {
+      margin-top: 1em;
+      background-color: #121420;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1em;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid pink;
+      overflow-x: auto;
+      /* flex-wrap: wrap; */
+}
+.wt-card1-head2-child3-btn {
+     padding: 3px 10px;
+     color: white;
+     border: 1px solid pink;
+     border-radius: 8px;
+     background-color: #1D2B51;
+     font-weight: 600;
+}
+.wt-c1-mc {
+      padding: 9px 12px;
+}
+
+.wt-card1-main {
+      margin-top: 1em;
+      background-color: #121420;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: space-around;
+      gap: 1em;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid pink;
+}
+#wt-card1-main-graph {
+      border: 1px solid green;
+      width: 220px;
+      height: 140px;
+      border-radius: 10px;
+}
+
+@media (min-width: 760px) {
+#wt-body-main {
+      width: 99%;
+      padding: 20px;
+}
+#wt-card1-head1 {
+      gap: 3em;
+}
+.wt-card1-head1-children {
+      gap: 0.5em;
+}
+#wt-card1-head2, .wt-card1-main  {
+      padding-left: 2em;
+      padding-right: 2em;
+}
+}
