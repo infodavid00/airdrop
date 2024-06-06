@@ -36,12 +36,19 @@ const CARD1 = ({ title, wallet, amount }) => {
       </div>
       <div className="financing-sec2-cardgen-body">
         <div className="financing-sec2-cardgen-body-header">Balance</div>
-        <select>
-          <option className="financing-sec2-cardgen-body-l">
-            <ETH />
-            <span>{amount}</span>
-          </option>
-        </select>
+        <div className="financing-sec2-cardgen-body-l">
+          <ETH />
+          <select
+            style={{
+              width: "100%",
+              backgroundColor: "transparent",
+              border: "none",
+              color: "pink",
+            }}
+          >
+            <option>{amount} Ethereum</option>
+          </select>
+        </div>
       </div>
     </div>
   );
