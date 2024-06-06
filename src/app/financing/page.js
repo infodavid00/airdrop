@@ -2,12 +2,55 @@
 import Header from "../../objects/Header/Header.js";
 import "./financing.css";
 import "../transactions/transactions.css";
-import { ChevronDown, ChevronUp, DollarSign } from "react-feather";
+import { ChevronDown, ChevronUp, DollarSign, Mail } from "react-feather";
+
+const ETH = () => {
+  return (
+    <span
+      style={{
+        width: "20px",
+        height: "20px",
+        borderRadius: 2,
+        backgroundColor: "dodgerblue",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "pink",
+      }}
+    >
+      E
+    </span>
+  );
+};
+
+const CARD1 = ({ title, wallet, amount }) => {
+  return (
+    <div className="financing-sec2-cardgen">
+      <div className="financing-sec2-cardgen-header">{title}</div>
+      <div className="financing-sec2-cardgen-body">
+        <div className="financing-sec2-cardgen-body-header">Address</div>
+        <div className="financing-sec2-cardgen-body-l">
+          <Mail />
+          <span>{wallet}</span>
+        </div>
+      </div>
+      <div className="financing-sec2-cardgen-body">
+        <div className="financing-sec2-cardgen-body-header">Balance</div>
+        <select>
+          <option className="financing-sec2-cardgen-body-l">
+            <ETH />
+            <span>{amount}</span>
+          </option>
+        </select>
+      </div>
+    </div>
+  );
+};
 
 export default function Financing() {
   return (
     <>
-      <Header active={"transactions"} />
+      <Header active={"financing"} />
       <div id="transactions-main">
         <h2>Financing</h2>
         <p style={{ marginTop: 16, marginBottom: 25 }}>
@@ -16,6 +59,29 @@ export default function Financing() {
           Please select your designated wallet you'd like to transfer funds to
           or from.
         </p>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "1em",
+            flexWrap: "wrap",
+          }}
+        >
+          <CARD1
+            title={"Primary Wallet"}
+            amount={"12.13"}
+            wallet={"0x302FD030F29239F39294292E09F939293020"}
+          />
+          <CARD1
+            title={"Secondary Wallet"}
+            amount={"0.16"}
+            wallet={"0x302E2030F03202EDFFB30294F2EDBAACE033"}
+          />
+          {/*  */}
+        </div>
 
         <div id="trans-child2">
           <div id="trans-child2-header">
@@ -78,20 +144,7 @@ export default function Financing() {
                       gap: "0.3em",
                     }}
                   >
-                    <span
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        borderRadius: 2,
-                        backgroundColor: "dodgerblue",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        color: "pink",
-                      }}
-                    >
-                      E
-                    </span>
+                    <ETH />
                     <span style={{ color: "pink" }}>Ethereum</span>
                   </td>
                 </tr>

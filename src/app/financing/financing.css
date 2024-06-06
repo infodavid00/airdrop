@@ -1,0 +1,37 @@
+
+.financing-sec2-cardgen {
+      background-color: #1E2F5B;
+      /* padding: 15px; */
+      border-radius: 10px;
+      max-width: 100%;
+}
+.financing-sec2-cardgen-header {
+     padding: 0.8em 1em;
+     text-align: left;
+     width: 100%;
+     border-bottom: 1px solid #222;
+     font-weight: 700;
+     white-space: nowrap;
+}
+.financing-sec2-cardgen-body {
+      padding: 1em 1em;
+      text-align: left;
+      width: 100%;
+      font-weight: 600;
+      white-space: nowrap;
+}
+.financing-sec2-cardgen-body-header {
+      margin-bottom: 10px;
+}
+.financing-sec2-cardgen-body-l {
+      background-color: #121420;
+      border-radius: 6px;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+      overflow-x: auto;
+      white-space: nowrap;
+}
