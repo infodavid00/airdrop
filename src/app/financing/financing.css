@@ -55,9 +55,23 @@
       font-size: 13px;
 }
 }
-@media (max-width: 702) {
+@media (max-width: 702px) {
  .fs2cm {
       width: 65%;
+      align-self: flex-start;
+      margin-left: -1px;
+}
+}
+@media (max-width: 664px) {
+.fs2cm {
+      width: 60%;
+      align-self: flex-start;
+      margin-left: -1px;
+      }
+}
+@media (max-width: 512px) {
+.fs2cm {
+      width: 94%;
       align-self: flex-start;
       margin-left: -1px;
 }
