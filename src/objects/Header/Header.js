@@ -1,15 +1,13 @@
-import {
-  LogOut,
-  User,
-  Mail,
-  HelpCircle,
-  Settings,
-  DollarSign,
-  ArrowLeft,
-  ArrowRight,
-} from "react-feather";
+import { Mail, HelpCircle } from "react-feather";
 import "./header.css";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../assets/logo 1.png";
+import UserCircle from "../../assets/Vector (4).svg";
+import Exit from "../../assets/Vector (5).svg";
+import Transaction from "../../assets/Vector (1).svg";
+import Dollar from "../../assets/Vector.svg";
+import Setting from "../../assets/Settings Icon.svg";
 
 export default function Header({ active }) {
   const username = "Meruzu_nft";
@@ -17,18 +15,19 @@ export default function Header({ active }) {
   return (
     <div id="header-body">
       <div id="header-container">
-        <div>
-          <h2 style={{ color: "rgba(255,255,255,0.8)" }}>
+        <div id="header-cont1">
+          <Image id="header-cont1-img" src={Logo} />
+          <h2 style={{ color: "rgba(255,255,255,0.8)" }} id="header-cont1-h">
             Airdrop<br></br> Farming
           </h2>
         </div>
         <div id="header-btn-container">
           <button className="header-btn" id="header-btn-1">
-            <User width={18} height={18} strokeWidth={1.8} /> {username}
+            <Image src={UserCircle} /> {username}
           </button>
           <button className="header-btn" id="header-btn-2">
             {" "}
-            <LogOut width={18} height={18} strokeWidth={1.8} /> Disconnect
+            <Image src={Exit} /> Disconnect
           </button>
         </div>
       </div>
@@ -49,7 +48,7 @@ export default function Header({ active }) {
             </Link>
           </button>
           <button className="header-nav-list">
-            <DollarSign color={"pink"} width={20} height={20} />{" "}
+            <Image src={Dollar} />{" "}
             <Link
               href="/financing"
               className={
@@ -62,17 +61,7 @@ export default function Header({ active }) {
             </Link>
           </button>
           <button className="header-nav-list">
-            <span
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <ArrowRight color={"pink"} width={20} height={10} />
-              <ArrowLeft color={"pink"} width={20} height={10} />
-            </span>{" "}
+            <Image src={Transaction} />
             <Link
               href="/transactions"
               className={
@@ -85,7 +74,7 @@ export default function Header({ active }) {
             </Link>
           </button>
           <button className="header-nav-list">
-            <Settings color={"pink"} width={20} height={20} />{" "}
+            <Image src={Setting} />{" "}
             <Link
               href="/config"
               className={
@@ -109,7 +98,7 @@ export default function Header({ active }) {
             gap: "0.3em",
             textDecoration: "underline",
             fontSize: 15,
-            color: "rgba(255,255,255,0.8)",
+            color: "white",
             whiteSpace: "nowrap",
           }}
         >

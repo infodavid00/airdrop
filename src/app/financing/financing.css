@@ -35,3 +35,16 @@
       overflow-x: auto;
       white-space: nowrap;
 }
+
+.fs2cm {
+      margin: auto;
+      width: 20%;
+      background-color: #1E2F5B;
+      border-radius: 10px;
+      max-width: 100%;
+}
+@media (max-width: 760px) {
+.fs2cm {
+      width: 100%;
+}
+}

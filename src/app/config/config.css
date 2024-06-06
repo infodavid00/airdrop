@@ -7,7 +7,7 @@
   background-color: #121420;
   width: 95%;
   border-radius: 10px;
-  color: rgba(255,255,255,0.8);
+  color: white;
   overflow-x: auto;
   margin-bottom: 1em;
 }
@@ -59,6 +59,7 @@
   align-items: center ; 
   gap: 1em;
   border-bottom: 0.7px solid grey;
+  font-size: 15px;
 }
 .cs2ccb-p2-header {
   display: flex;
@@ -103,7 +104,7 @@
   width: 48%;
 }
 .config-section2-card-content-body {
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .config-section2-card-list {
  width: 30%;

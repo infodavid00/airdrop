@@ -2,7 +2,14 @@
 import Header from "../../objects/Header/Header.js";
 import "./financing.css";
 import "../transactions/transactions.css";
-import { ChevronDown, ChevronUp, DollarSign, Mail } from "react-feather";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+  DollarSign,
+  Mail,
+} from "react-feather";
 
 const ETH = () => {
   return (
@@ -83,7 +90,7 @@ export default function Financing() {
             wallet={"0x302FD030F29239F39294292E09F939293020"}
           />
           {/*  */}
-          <div className="financing-sec2-cardgen" style={{ margin: "auto" }}>
+          <div className="fs2cm">
             <div
               className="financing-sec2-cardgen-header"
               style={{ textAlign: "center" }}
@@ -110,9 +117,46 @@ export default function Financing() {
             </div>
             <div
               className="financing-sec2-cardgen-body-header"
-              style={{ textAlign: "center" }}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
             >
-              To
+              <span
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <ChevronLeft color="pink" width={17} height={17} />
+                <ChevronLeft
+                  color="pink"
+                  width={17}
+                  height={17}
+                  style={{ marginLeft: -10 }}
+                />
+              </span>
+              <span>To</span>
+              <span
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <ChevronRight color="rgba(0, 170,0,1)" width={17} height={17} />
+                <ChevronRight
+                  color="rgba(0, 170,0,1)"
+                  width={17}
+                  height={17}
+                  style={{ marginLeft: -10 }}
+                />
+              </span>
             </div>
             <div className="financing-sec2-cardgen-body">
               <div
@@ -132,7 +176,7 @@ export default function Financing() {
           <CARD1
             title={"Secondary Wallet"}
             amount={"0.16"}
-            wallet={"0x302E2030F03202EDFFB30294F2EDBAACE033"}
+            wallet={"0x4930F30EDFF030200DBC030300E4030202"}
           />
           {/*  */}
         </div>

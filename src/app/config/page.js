@@ -1,14 +1,12 @@
 // /config
-import {
-  Bell,
-  Calendar,
-  DollarSign,
-  Download,
-  Mail,
-  Settings,
-} from "react-feather";
+import { Bell, Calendar, Mail } from "react-feather";
 import Header from "../../objects/Header/Header.js";
 import "./config.css";
+import Profile from "../../assets/PFP 1.png";
+import Image from "next/image.js";
+import Setting from "../../assets/Settings Icon.svg";
+import Dollar from "../../assets/Vector.svg";
+import Download from "../../assets/Vector (10).svg";
 
 export default function Config() {
   const username = "meruzu_nft";
@@ -35,7 +33,7 @@ export default function Config() {
 
   const settings = [
     {
-      icon: () => <Settings width={20} height={20} />,
+      icon: () => <Image src={Setting} />,
       name: "General",
       description: "View and edit your AirdropFarming settings.",
       to: "/config",
@@ -59,13 +57,13 @@ export default function Config() {
       to: "/config",
     },
     {
-      icon: () => <DollarSign width={20} height={20} />,
+      icon: () => <Image src={Dollar} />,
       name: "Billing",
       description: "Manage your billing information.",
       to: "/config",
     },
     {
-      icon: () => <Download width={20} height={20} />,
+      icon: () => <Image src={Download} />,
       name: "Download History",
       description: "Download your transaction history.",
       to: "/config",
@@ -92,7 +90,8 @@ export default function Config() {
             <div style={{ padding: 10 }}>
               <div className="config-section2-card-content-body">
                 <div id="config-section2-card-content-panel1">
-                  <div id="cs2ccp1-profile"></div>
+                  {/* <div id="cs2ccp1-profile"></div> */}
+                  <Image src={Profile} id="cs2ccp1-profile" />
                   <h3 style={{ marginTop: 10 }}>{username}</h3>
                 </div>
                 <div
@@ -140,8 +139,11 @@ export default function Config() {
                   >
                     <Bell
                       color={
-                        elem.type !== "Error Notification" ? "orange" : "tomato"
+                        elem.type !== "Error Notification"
+                          ? "rgba(0,180,0,1)"
+                          : "tomato"
                       }
+                      style={{ alignSelf: "flex-start", width: 40 }}
                     />
                     <div>
                       <div className="cs2ccb-p2-header">
