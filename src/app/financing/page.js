@@ -82,6 +82,53 @@ export default function Financing() {
             amount={"12.13"}
             wallet={"0x302FD030F29239F39294292E09F939293020"}
           />
+          {/*  */}
+          <div className="financing-sec2-cardgen" style={{ margin: "auto" }}>
+            <div
+              className="financing-sec2-cardgen-header"
+              style={{ textAlign: "center" }}
+            >
+              Transfer
+            </div>
+            <div className="financing-sec2-cardgen-body">
+              <div
+                className="financing-sec2-cardgen-body-header"
+                style={{ textAlign: "center" }}
+              >
+                Amount
+              </div>
+              <div
+                className="financing-sec2-cardgen-body-l"
+                style={{
+                  justifyContent: "center",
+                  width: "auto",
+                }}
+              >
+                <ETH />
+                <span>0.49</span>
+              </div>
+            </div>
+            <div
+              className="financing-sec2-cardgen-body-header"
+              style={{ textAlign: "center" }}
+            >
+              To
+            </div>
+            <div className="financing-sec2-cardgen-body">
+              <div
+                className="financing-sec2-cardgen-body-l"
+                style={{
+                  justifyContent: "center",
+                  width: "auto",
+                  cursor: "pointer",
+                  border: "1px solid pink",
+                }}
+              >
+                Send
+              </div>
+            </div>
+          </div>
+          {/*  */}
           <CARD1
             title={"Secondary Wallet"}
             amount={"0.16"}
