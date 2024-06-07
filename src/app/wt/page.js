@@ -1,16 +1,15 @@
 // /financing
-import {
-  ArrowLeft,
-  ArrowRight,
-  BarChart,
-  ChevronDown,
-  Mail,
-  Search,
-  X,
-} from "react-feather";
+import { ChevronDown, Maximize, Search, Share, Trash2, X } from "react-feather";
 import Header from "../../objects/Header/Header.js";
 import "./wt.css";
 import Link from "next/link.js";
+import Wallet from "../../assets/Vector (5) (1).svg";
+import Arrow from "../../assets/ZKSync.png";
+import Status from "../../assets/Vector (2).svg";
+import Log2 from "../../assets/Base.png";
+import Scroll from "../../assets/Scroll.png";
+import Transaction from "../../assets/Vector (1).svg";
+import Image from "next/image.js";
 
 const displayBp = {
   display: "flex",
@@ -19,35 +18,33 @@ const displayBp = {
   gap: "1em",
 };
 
+const CheckBox = ({ checked }) => {
+  return (
+    <>
+      <label class="custom-checkbox">
+        <input type="checkbox" checked={checked} />
+        <span class="checkmark"></span>
+      </label>
+    </>
+  );
+};
+
 const WtCard1Header2 = () => {
   return (
     <div id="wt-card1-head2">
       <div style={displayBp}>
-        <Mail strokeWidth={1.3} />
-        <span>0x492949F9......2949229492935C</span>
+        <Image src={Wallet} />
+        <span style={{ fontSize: "15px" }}>0x492949F9......2949229492935C</span>
       </div>
       <div style={displayBp}>
-        <span
-          style={{
-            background: "white",
-            width: 20,
-            height: 20,
-            borderRadius: 5,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <ArrowLeft width={9} height={9} color={"black"} />
-          <ArrowRight width={9} height={9} color={"black"} />
-        </span>
+        <Image src={Arrow} />
         <span style={{ fontWeight: 600 }}>Protocol:</span>
         <span style={{ fontWeight: 700, color: "dodgerblue" }}>ZKSync</span>
       </div>
       <div style={displayBp}>
         <button className="wt-card1-head2-child3-btn">Alert</button>
         <button className="wt-card1-head2-child3-btn">Abort</button>
-        <input type="checkbox" id="" />
+        <CheckBox />
         <ChevronDown color="pink" width={20} height={20} />
         <X color="pink" width={18} height={18} />
       </div>
@@ -55,9 +52,9 @@ const WtCard1Header2 = () => {
   );
 };
 
-const WtCard1Main = ({ proto }) => {
+const WtCard1Main = ({ proto, amFirst }) => {
   return (
-    <div className="wt-card1-main">
+    <div className="wt-card1-main" id={amFirst && "wt-card1-active"}>
       <div
         style={{
           display: "flex",
@@ -67,7 +64,7 @@ const WtCard1Main = ({ proto }) => {
           gap: "1em",
         }}
       >
-        <input type="checkbox" id="" checked="true" />
+        <CheckBox checked={true} />
         <ChevronDown color="pink" width={20} height={20} />
         <X color="pink" width={18} height={18} />
       </div>
@@ -91,25 +88,14 @@ const WtCard1Main = ({ proto }) => {
           }}
         >
           <div style={displayBp}>
-            <Mail strokeWidth={1.3} />
-            <span>0x492949F940F92939FS2949229492935C</span>
+            <Image src={Wallet} />
+            <span style={{ overflowX: "auto", whiteSpace: "nowrap" }}>
+              0x492949F940F92939FS294922949C
+            </span>
           </div>
 
           <div style={displayBp}>
-            <span
-              style={{
-                background: proto === "Scroll" ? "white" : "dodgerblue",
-                width: 20,
-                height: 20,
-                borderRadius: 5,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <ArrowLeft width={9} height={9} color={"black"} />
-              <ArrowRight width={9} height={9} color={"black"} />
-            </span>
+            <Image src={proto === "Scroll" ? Scroll : Log2} />
             <span style={{ fontWeight: 700 }}>Protocol:</span>
             <span
               style={{
@@ -122,7 +108,7 @@ const WtCard1Main = ({ proto }) => {
           </div>
 
           <div style={displayBp}>
-            <BarChart strokeWidth={1.3} />
+            <Image src={Status} />
             <span style={{ fontWeight: 700 }}>Status:</span>
             <button
               className="wt-card1-head2-child3-btn wt-c1-mc"
@@ -167,8 +153,8 @@ export default function WalletTracker() {
       <Header active={"wt"} />
       <div id="wt">
         <div id="wt-body-main">
-          {/* card 1 */}
-          <div>
+          <div id="wtc1">
+            {/* card 1 */}
             <div id="wt-card1-head1">
               <div style={{ fontWeight: 700 }}>Connected Wallets</div>
               <div className="wt-card1-head1-children">
@@ -192,12 +178,152 @@ export default function WalletTracker() {
             </div>
             {/*  */}
             <WtCard1Header2 />
-            <WtCard1Main proto={"Scroll"} />
+            <WtCard1Main proto={"Scroll"} amFirst={true} />
             <WtCard1Header2 />
             <WtCard1Main proto={"Base"} />
           </div>
           {/* card 1 */}
-          <div></div>
+          {/*  */}
+          <div id="wtc2">
+            <div id="wtc2-header">
+              <button className="wtc2-btn">
+                {" "}
+                <Share
+                  width={18}
+                  style={{ transform: "rotateZ(180deg)" }}
+                />{" "}
+                Import
+              </button>
+              <button className="wtc2-btn">
+                {" "}
+                <Share width={18} /> Export
+              </button>
+              <button className="wtc2-btn">
+                {" "}
+                <Trash2 width={18} /> Delete
+              </button>
+            </div>
+            {/*  */}
+            <div id="wtc2-child">
+              <div id="wtc2-child-header">
+                <h3>Wallet Properties</h3>
+              </div>
+              <div id="wtc2-child-child">
+                <div className="wtc2-child-clist">
+                  <div className="wtc2-child-clist-header">
+                    Address <Maximize width={18} />
+                  </div>
+                  <div className="wtc2-child-clist-body">
+                    <Image src={Wallet} width={17} />
+                    <span className="wtc2-child-clist-body-t">
+                      0xB323B28128FEF9392B22399EF0B0302
+                    </span>
+                  </div>
+                </div>
+                {/*  */}
+                <div className="wtc2-child-clist">
+                  <div className="wtc2-child-clist-header">
+                    Select Protocol <Maximize width={18} />
+                  </div>
+                  <div className="wtc2-child-clist-body w2ccb-dd">
+                    <div className="w2ccb-dd1">
+                      <Image src={Scroll} width={18} />
+                      <span>Scroll</span>
+                    </div>
+                    <select
+                      style={{
+                        backgroundColor: "transparent",
+                        color: "white",
+                        border: "none",
+                        outline: "none",
+                      }}
+                    >
+                      <option>
+                        <span className="wtc2-child-clist-body-t">
+                          Native zkEVM Layer 2
+                        </span>
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                {/*  */}
+                <div className="wtc2-child-clist">
+                  <div className="wtc2-child-clist-header">
+                    Specify Condition <Maximize width={18} />
+                  </div>
+                  <div className="wtc2-child-clist-body w2ccb-dd">
+                    <div className="w2ccb-dd1">
+                      <Image src={Status} width={18} />
+                      <span style={{ color: "rgba(0,150,0,1)" }}>Active</span>
+                    </div>
+                    <select
+                      style={{
+                        backgroundColor: "transparent",
+                        color: "white",
+                        border: "none",
+                        outline: "none",
+                        color: "rgba(0,150,0,1)",
+                      }}
+                    >
+                      <option>
+                        <span className="wtc2-child-clist-body-t">
+                          Processing Transactions
+                        </span>
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                {/*  */}
+                <div className="wtc2-child-clist">
+                  <div className="wtc2-child-clist-header">
+                    Balance <Maximize width={18} />
+                  </div>
+                  <div className="wtc2-child-clist-body w2ccb-dd">
+                    <div className="w2ccb-dd1">
+                      <Image src={Log2} width={18} />
+                      <span>18.43 Ethereum</span>
+                    </div>
+                    <div>$53727.50</div>
+                  </div>
+                </div>
+                {/*  */}
+                <div className="wtc2-child-clist">
+                  <div className="wtc2-child-clist-header">
+                    Transactions <Maximize width={18} />
+                  </div>
+                  <div className="wtc2-child-clist-body w2ccb-dd">
+                    <div className="w2ccb-dd1">
+                      <Image src={Transaction} width={18} />
+                      <span>1989</span>
+                    </div>
+                    <div>Transactions Processed</div>
+                  </div>
+                </div>
+                {/*  */}
+                {/*  */}
+                <div className="wtc2-child-clist">
+                  <div className="wtc2-child-clist-header">
+                    Transaction Rate <Maximize width={18} />
+                  </div>
+                  <div className="wtc2-child-clist-body w2ccb-dd">
+                    <div
+                      style={{
+                        backgroundColor: "green",
+                        padding: 4,
+                        width: "47%",
+                        borderRadius: 5,
+                        textAlign: "center",
+                      }}
+                    >
+                      {" "}
+                      47%
+                    </div>
+                  </div>
+                </div>
+                {/*  */}
+              </div>
+            </div>
+          </div>
           {/* card 2 */}
         </div>
       </div>

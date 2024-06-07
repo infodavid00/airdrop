@@ -1,3 +1,47 @@
+
+.custom-checkbox {
+      position: relative;
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      z-index: 1;
+}
+.custom-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+}
+ .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 17px;
+      width: 17px;
+      background-color: transparent;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+}
+/* .custom-checkbox input:hover~.checkmark {
+      background-color: #f0f0f0;
+} */
+.custom-checkbox input:checked~.checkmark:after {
+      display: block;
+}
+.custom-checkbox .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 1px;
+      width: 3px;
+      height: 5px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+}
+
 /* 
 #wt {
      position: fixed;
@@ -16,7 +60,7 @@
       margin-top: 8em;
       padding: 15px;
       width: 97%;
-      color: rgba(255, 255, 255, 0.8);
+      color: white;
       overflow-x: auto;
       margin-bottom: 1em;
       display: flex;
@@ -35,7 +79,10 @@
       gap: 1em;
       padding: 10px;
       border-radius: 7px;
-      overflow-x: auto;
+      /* overflow-x: auto; */
+      /* flex-direction: column; */
+      word-wrap: wrap;
+      width: 100%;
 }
 .wt-card1-head1-children {
      display: flex;
@@ -66,8 +113,9 @@
       padding: 10px;
       border-radius: 8px;
       border: 1px solid pink;
-      overflow-x: auto;
-      /* flex-wrap: wrap; */
+      /* overflow-x: auto; */
+      flex-wrap: wrap;
+      width: 100%;
 }
 .wt-card1-head2-child3-btn {
      padding: 3px 10px;
@@ -93,12 +141,93 @@
       padding: 10px;
       border-radius: 8px;
       border: 1px solid pink;
+      width: 100%;
 }
 #wt-card1-main-graph {
       border: 1px solid green;
       width: 220px;
       height: 140px;
       border-radius: 10px;
+}
+
+#wtc2 {
+      align-self: flex-start;
+      width: 100%;
+      margin-top: 2em;
+}
+#wtc2-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1em;
+}
+.wtc2-btn {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 10px;
+      border-radius: 8px;
+      color: white;
+      background-color: #1D2B51;
+      border: none;
+      outline: none;
+}
+#wtc2-child {
+      background-color: #121420;
+      margin-top: 1em;
+      border-radius: 10px;
+}
+#wtc2-child-header {
+      padding: 10px;
+      border-bottom: 1px sold #222;
+      /* margin-bottom: 1em; */
+}
+#wtc2-child-child {
+      padding: 0.8em;
+}
+.wtc2-child-clist {
+      background-color: #1D2B51;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 1em;
+}
+.wtc2-child-clist-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+}
+.wtc2-child-clist-body {
+      background-color: #121420;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5em;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 0.5em;
+}
+.wtc2-child-clist-body-t {
+      overflow-x: auto;
+}
+.wtc2-child-clist-body-t::-webkit-scrollbar {
+      display: none;
+}
+.w2ccb-dd {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.w2ccb-dd1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5em;
 }
 
 @media (min-width: 760px) {
@@ -115,5 +244,28 @@
 #wt-card1-head2, .wt-card1-main  {
       padding-left: 2em;
       padding-right: 2em;
+}
+#wtc2 {
+      width: 30%;
+      margin-top: 0;
+}
+}
+
+#wt-card1-active {
+      box-shadow: 0 0 15px 2px blue;
+      transition: box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 760px) {
+#wtc1 {
+      width: 100%;
+}
+.wt-c1-mc {
+      padding: 5px;
+}
+#wt-card1-main-graph {
+      align-self: center;
+      margin: auto;
+      margin-top: 1em;
 }
 }
